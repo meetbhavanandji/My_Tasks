@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            padding: 10px;
+            border: 3px solid lightgray;
+        }
+
+        .parent {
+            position: relative;
+        }
+
+        .child-element {
+            /* top: 10px; */
+            position: absolute;
+        }
+
+        .parents {
+            position: absolute;
+            margin-top: 50px;
+        }
+
+        .child-elements {
+            top: 10px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box parent">parents(relative)
+        <div class=" box child-element">child(absolute)</div>
+    </div>
+
+    <div class="box parents">parents(absolute)
+        <div class=" box child-elements">child(relative)</div>
+    </div>
+</body>
+
+</html>
