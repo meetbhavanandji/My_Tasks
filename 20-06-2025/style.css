@@ -1,0 +1,436 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-size: 15px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+  background-color: black;
+}
+
+main {
+  margin-left: 120px;
+  padding: 12px 24px;
+}
+
+.outro {
+  padding: 0 10px;
+}
+
+.sidebar2 {
+  display: none;
+  justify-content: space-evenly;
+  margin: 5px 0;
+  position: sticky;
+  top: 0;
+  padding: 5px 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* .sidebar2 a {
+  color: #757575;
+  font-size: small;
+} */
+
+.sidebar2 a:hover {
+  background-color: white;
+  color: #000;
+}
+
+.sidebar {
+  position: fixed;
+  width: 120px;
+  background-color: #222222;
+  color: white;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  margin-bottom: 20px;
+}
+
+.fa-solid {
+  font-size: 25px;
+  color: #fff;
+}
+
+.home,
+.about,
+.photos,
+.contact {
+  padding: 10px 10px;
+  /* margin-bottom: 20px; */
+}
+
+.sidebar p {
+  font-weight: 10;
+  font-size: 15px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/*********** HERO ***********/
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-width: 992px;
+}
+
+header {
+  /* margin-left: 230px; */
+  padding: 12px 24px;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 64px;
+  letter-spacing: 1.5px;
+  margin-top: 50px;
+  font-weight: 100;
+}
+
+.hero-text p {
+  margin-top: 20px;
+}
+
+/* ABOUT */
+
+.intro {
+  text-align: left;
+  padding: 64px 0;
+  margin: 0 150px;
+  /* width: 100%; */
+  /* margin-top: 40px; */
+}
+
+h2 {
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.underline {
+  display: block;
+  height: 0.5px;
+  width: 150px;
+  background-color: white;
+  margin: 20px 0;
+}
+
+p {
+  color: #757575;
+  text-align: justify;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.center {
+  text-align: center;
+}
+
+.my-skill {
+  margin: 22px 0;
+}
+
+.container {
+  width: 100%;
+  background-color: white;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+
+  background-color: #616161;
+  color: #616161;
+}
+
+.photography {
+  width: 90%;
+}
+.webdesign {
+  width: 80%;
+}
+.photoshop {
+  width: 70%;
+}
+
+.level p {
+  margin: 15px 0;
+  letter-spacing: 5px;
+  font-weight: 100;
+}
+
+.notice-board {
+  margin: 20px 0;
+  padding: 30px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.download-btn button {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 12px 5px;
+  margin: 16px 0;
+  /* width: 25%; */
+  border: none;
+}
+
+.fa-download {
+  /* width: 5px; */
+  margin: 0;
+}
+
+.my-price {
+  display: flex;
+  column-gap: 10px;
+}
+
+.price-box1 {
+  flex: 50%;
+}
+.price-box2 {
+  flex: 50%;
+}
+
+.basic {
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  opacity: 0.6;
+  list-style: none;
+}
+
+.basic:hover {
+  opacity: 1;
+}
+
+.basic li {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+.one {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+  font-size: 24px;
+  color: white;
+  background-color: #616161;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.price h2,
+.price span {
+  font-size: 16px;
+}
+
+.signup {
+  background-color: #f1f1f1 !important;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+.signup button {
+  border: none;
+  padding: 5px 15px;
+  background-color: white;
+}
+
+.reputation h2 {
+  padding: 24px 0;
+  margin: 10px 0;
+}
+
+.box1,
+.box2 {
+  display: flex;
+  column-gap: 25px;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.box1-text,
+.box2-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* align-items: center  ; */
+}
+
+.photo {
+  margin: 0 150px;
+}
+
+.gallary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 140px;
+}
+
+.raw1,
+.raw2 {
+  padding: 0 10px;
+}
+
+.raw1 img,
+.raw2 img {
+  margin-bottom: 10px;
+}
+
+.contact-me,
+.contect-list {
+  margin: 0 150px;
+}
+
+.contect-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 15px;
+}
+
+.location,
+.call,
+.msg {
+  display: flex;
+  column-gap: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 150px;
+  padding-bottom: 100px;
+}
+
+.contact-form input {
+  padding: 16px 8px;
+  margin: 15px 0;
+}
+
+.submit button {
+  padding: 12px 24px;
+}
+
+.submit button:hover {
+  opacity: 0.7;
+}
+
+.footer {
+  opacity: 0.7;
+}
+
+.icon {
+  margin: 0 150px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  column-gap: 10px;
+}
+
+.icon i {
+  font-size: 25px;
+  opacity: 0.7;
+}
+
+.icon i:hover {
+  opacity: 0.4;
+}
+
+.footer-text {
+  display: flex;
+  margin: 50px 150px;
+}
+
+.footer-text a {
+  color: #535252;
+}
+
+.footer-text a:hover {
+  color: chartreuse;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 0;
+  }
+  .intro {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .gallary,
+  .contact-me,
+  .contect-list,
+  .contact-form,
+  .footer,
+  .icon,
+  .footer-text {
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 666px) {
+  .sidebar2 {
+    display: flex;
+  }
+  main {
+    margin-left: 0;
+    padding: 0;
+  }
+  .sidebar {
+    display: none;
+  }
+  .intro {
+    padding: 0 !important;
+    margin: 0 15px !important;
+  }
+  .notice-board {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0; */
+    text-align: center;
+  }
+  .my-price {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .photo {
+    margin-left: 30px;
+  }
+  .gallary {
+    grid-template-columns: 1fr;
+    margin: 0 20px;
+  }
+  .gallary {
+    margin: 0 !important;
+  }
+  .footer {
+    padding-top: 50px;
+    padding-bottom: 150px;
+  }
+}
