@@ -1,0 +1,44 @@
+<style>
+    input[name="tab"] {
+        display: none;
+    }
+
+    .tab-label {
+        display: inline-block;
+        padding: 10px;
+        background: #ddd;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    .tab {
+        display: none;
+        padding: 15px;
+        background: #eee;
+        margin-top: 10px;
+    }
+
+    #tab1:checked~.content #content1,
+    #tab2:checked~.content #content2,
+    #tab3:checked~.content #content3 {
+        display: block;
+    }
+</style>
+
+<!-- Radio Inputs -->
+<input type="radio" name="tab" id="tab1" checked>
+<input type="radio" name="tab" id="tab2">
+<input type="radio" name="tab" id="tab3">
+
+<!-- Labels -->
+<label for="tab1" class="tab-label">Pizza</label>
+<label for="tab2" class="tab-label">Pasta</label>
+<label for="tab3" class="tab-label">Drinks</label>
+
+<!-- Content -->
+<div class="content">
+    <div id="content1" class="tab">Pizza <br> menu <br> content</div>
+    <div id="content2" class="tab">menu <br> Pasta <br> content</div>
+    <div id="content3" class="tab">content <br> menu <br> Drinks
+    3</div>
+</div>
