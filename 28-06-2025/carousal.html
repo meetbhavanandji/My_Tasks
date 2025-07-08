@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .gallary-carousal{
+            background-color: #eee;
+        }
+
+        .gallary {
+            width: 66%;
+            height: 200px;
+            margin-right: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            counter-increment: gallary;
+        }
+
+
+        .gallary::before {
+            display: block;
+            text-align: center;
+            content: counter(gallary);
+            line-height: 200px;
+            font-size: 80px;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <p><code>wrapAround:true</code></p>
+    <div class="gallary-carousal" data-flickity-options='{"wrapAround:true"}'>
+        <div class="gallary">1</div>
+        <div class="gallary">2</div>
+        <div class="gallary">3</div>
+        <div class="gallary">4</div>
+        <div class="gallary">5</div>
+    </div>
+</body>
+
+</html>
