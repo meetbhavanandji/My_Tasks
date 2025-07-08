@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bea1090ddf.js" crossorigin="anonymous"></script>
+    <title>pRACTICE</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: darkslategrey;
+        }
+
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hamburger-icon {
+            display: none;
+            border: none;
+            background-color: transparent;
+        }
+
+        .hamburger-icon .fa-bars,
+        .hamburger-icon .fa-x {
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .hamburger-icon input[type="checkbox"] {
+            appearance: none;
+        }
+
+        .logo-text {
+            color: white;
+
+        }
+
+        .navigation {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navigation a {
+            color: azure;
+        }
+
+        @media(max-width:600px) {
+            header {
+                display: block;
+            }
+
+            .navigation {
+                height: 0;
+                overflow: hidden;
+                flex-direction: column;
+                align-items: center;
+                transition: all 0.5 ease-in-out;
+            }
+
+            .logo {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .hamburger-icon {
+                display: block;
+            }
+
+            .fa-x {
+                display: none;
+            }
+
+            header:has(.hamburger-icon input[type="checkbox"]:checked) .navigation {
+                margin-top: 2rem;
+                height: 150px;
+            }
+
+            header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
+                display: none;
+            }
+
+            header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-x {
+                display: inline-block;
+            }
+        }
+
+        .container {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container:nth-child(1) {
+            margin-top: 0;
+        }
+
+        .container p {
+            text-align: center;
+            font-size: 3.5rem;
+            color: whitesmoke;
+            text-shadow: 2px 2px black;
+
+        }
+
+        .container1 {
+            background-image: url(https://www.chromethemer.com/download/hd-wallpapers/space-7680x4320.jpg);
+        }
+
+        .container2 {
+            background-image: url(https://e0.pxfuel.com/wallpapers/345/195/desktop-wallpaper-lost-in-space-lost-in-space-robot.jpg);
+        }
+
+        .container3 {
+            background-image: url(https://images2.alphacoders.com/957/thumb-1920-957525.jpg);
+        }
+
+        .container4 {
+            background-image: url(https://a-static.besthdwallpaper.com/astronaut-watching-the-world-on-the-rock-he-sits-on-wallpaper-2560x1600-91713_7.jpg);
+        }
+
+        .container5 {
+            background-image: url(https://a-static.besthdwallpaper.com/astronaut-with-red-smoke-wallpaper-3554x1999-91607_53.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logo-text">LOGO</h1>
+            <button class="hamburger-icon">
+                <label for="dropdown">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-x"></i>
+                </label>
+                <input type="checkbox" id="dropdown">
+            </button>
+        </div>
+        <ul class="navigation">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="container container1">
+            <p>This is container 1</p>
+        </div>
+        <div class="container container2">
+            <p>This is container 2</p>
+        </div>
+        <div class="container container3">
+            <p>This is container 3</p>
+        </div>
+        <div class="container container4">
+            <p>This is container 4</p>
+        </div>
+        <div class="container container5">
+            <p>This is container 5</p>
+        </div>
+    </main>
+</body>
+
+</html>
