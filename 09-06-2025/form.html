@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Survey Form </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(142, 201, 224);
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            font-size: x-large;
+            color: azure;
+        }
+
+        p{
+            font-size: x-large;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            border-radius: 10px;
+            background-color: white;
+            padding: 20px 50px;
+            width: 60%;
+            margin: auto;
+        }
+
+        .column1 {
+            float: left;
+            width: 40%;
+            margin-top: 20px;
+            /* text-align: right; */
+        }
+
+        .column2 {
+            float: left;
+            width: 60%;
+            margin-top: 20px;
+            /* text-align: left; */
+        }
+
+        input[type=number],
+        input[type=text],
+        input[type=email],
+        select,
+        textarea {
+            padding: 12px;
+            width: 100%;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <h1>Good Vibes Form</h1>
+    </div>
+    <div class="container">
+        <p>Tell us something positive that happened to you today.</p>
+        <form action="do-something" method="get">
+
+            <div class="row">
+                <div class="column1">
+                    <label for="name" id="name">Name</label>
+                </div>
+                <div class="column2">
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name"><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column1">
+                    <label for="email" id="email">Email</label>
+                </div>
+                <div class="column2">
+                    <input type="email" name="email" id="email" placeholder="Enter Your email address"><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column1">
+                    <label for="chosenumber"> On a scale of 1-10, how good was is ?</label>
+                </div>
+                <div class="column2">
+                    <input type="number" name="chosenumber" id="chosenumber" min="1" max="10"><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column1">
+                    <label for="place">Where did it happen? </label>
+                </div>
+                <div class="column2">
+                    <select name="place" id="place">
+                        <option value="athome">At Home</option>
+                        <option value="onmycommute">On my commute</option>
+                        <option value="atwork">At work</option>
+                        <option value="onthestreet">On the Street</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column1">
+                    <label for="radiobtn">At what time of day did it happen?</label>
+                </div>
+                <div class="column2">
+                    <input type="radio" id="morning" name="fav_language" value="morning">
+                    <label for="morning">Morning</label><br>
+                    <input type="radio" id="afternoon" name="fav_language" value="afternoon">
+                    <label for="afternoon">Afternoon</label><br>
+                    <input type="radio" id="evening" name="fav_language" value="evening">
+                    <label for="evening">Evening</label><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column1">
+                    <label for="multiselect">What emotions did you experience?
+                        (Select all that apply)</label>
+                </div>
+                <div class="column2">
+                    <input type="checkbox" name="experience1" id="experience1">
+                    <label for="experience1">Exited</label><br>
+                    <input type="checkbox" name="experience2" id="experience2">
+                    <label for="experience2">Humbled</label><br>
+                    <input type="checkbox" name="experience3" id="experience3">
+                    <label for="experience3">Elated</label><br>
+                    <input type="checkbox" name="experience4" id="experience4">
+                    <label for="experience4">Loved</label><br>
+                    <input type="checkbox" name="experience5" id="experience5">
+                    <label for="experience5">Enthusiastic</label><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column1">
+                    <label for="subject">Please describe your positive experience.</label>
+                </div>
+                <div class="column2">
+                    <textarea name="subject" id="subject" placeholder="Enter your Experience Here..."
+                        style="height: 200px;"></textarea>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    </div>
+</body>
+
+</html>
