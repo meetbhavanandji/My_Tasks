@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: auto;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 10px;
+  text-align: center;
+}
+
+.logo-text span:first-child {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.logo-text span:last-child {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+/* Hide default checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #0b153c;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger span:nth-child(2) {
+  width: 15px;
+}
+.hamburger span:nth-child(3) {
+  width: 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0b153c;
+  font-size: 16px;
+}
+
+.cta-button {
+  padding: 12px 20px;
+  background-color: transparent;
+  color: #00296d;
+  border-radius: 8px;
+  border: 1px solid #00296d;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0171a3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  .cta-button {
+    display: none;
+  }
+  .navbar {
+    justify-content: space-evenly;
+    padding: 15px;
+  }
+  .logo-text {
+    margin-left: 60px;
+  }
+
+  .logo {
+    margin-right: 60px;
+  }
+
+  .logo-text span:first-child {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .logo-text span:last-child {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  /* Show menu when checkbox is checked */
+  #menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+
+  .cta-button {
+    margin-top: 10px;
+  }
+}
