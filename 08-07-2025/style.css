@@ -145,14 +145,87 @@ body {
     align-items: center;
     display: none;
     padding: 20px 0;
+    transition: all 5s;
   }
 
   /* Show menu when checkbox is checked */
   #menu-toggle:checked + .hamburger + .nav-links {
     display: flex;
+    z-index: 9999999;
+    background-color: white;
   }
 
   .cta-button {
     margin-top: 10px;
+  }
+}
+
+.hero-section {
+  padding: 25px 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+}
+
+.hero-text span {
+  display: block;
+  font-weight: 400;
+  font-size: 20px;
+  color: #2977d5;
+  margin: 50px 0;
+}
+
+.hero-text h1 {
+  /* font-style: SemiBold; */
+  margin-bottom: 24px;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 100%;
+}
+.submit button {
+  background-color: #44c6e9;
+  border: none;
+  box-shadow: 5px 5px 10px 2px #2977d5;
+}
+
+.circle {
+  margin-top: 40px;
+  width: 793px;
+  height: 793px;
+  border-radius: 50%;
+  background-image: linear-gradient(#d4e4f4, #44c6e9, #2977d5, #00296d);
+  /* background-color: black; */
+  z-index: -1;
+  position: relative;
+  box-shadow: 5px 5px 10px 5px rgba(102, 102, 102, 0.2);
+}
+
+.hero-image img {
+  position: absolute;
+  z-index: 9999;
+  max-width: 525px;
+  width: 100%;
+  top: 150px;
+  border-radius: 10px;
+  right: 200px;
+}
+
+@media (max-width: 768px) {
+  .circle {
+    width: 535px;
+    height: 535px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: -1;
+  }
+  .hero-image img {
+    width: 250px;
+    left: 53px;
+  }
+  .hero-section {
+    flex-direction: column-reverse;
+    padding: 20px;
   }
 }
