@@ -2,225 +2,769 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ondontologia Integral</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./pic/Union.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #fef7f9;
+            max-width: 1450px;
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 82px;
+            position: relative;
+            background-color: #fef7f9;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            gap: 22px;
+        }
+
+        .logo img {
+            width: 40px;
+            scale: 1.2;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 2.1;
+        }
+
+        .logo-text span:first-child {
+            font-weight: 600;
+            font-size: 20px;
+            color: #000;
+        }
+
+        .logo-text span:last-child {
+            font-weight: 400;
+            font-size: 13px;
+            color: #000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 65px;
+            margin-left: -120px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #0071c2;
+            transition: all 0.6s;
+        }
+
+        .cta-button {
+            padding: 10px 40px;
+            border: 1px solid #00296d;
+            border-radius: 15px;
+            background-color: transparent;
+            color: #00296d;
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 17px;
+        }
+
+        .cta-button:hover {
+            border: 1px solid #44c6e9;
+            color: #44c6e9;
+            transition: all 0.4s;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 3px;
+            background-color: #0b153c;
+            border-radius: 50px;
+        }
+
+        .hamburger span:nth-child(2) {
+            width: 15px;
+        }
+
+        .hamburger span:nth-child(3) {
+            width: 20px;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px 30px;
+                z-index: 9999;
+            }
+
+            .nav-links {
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .nav-links,
+            .cta-button {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 20px;
+                background-color: #fef7f9;
+                display: none;
+                /* flex-direction: column; */
+                align-items: center;
+                gap: 20px;
+                z-index: 999;
+            }
+
+            #menu-toggle:checked~.mobile-menu {
+                display: flex;
+            }
+
+            .mobile-icons {
+                display: flex;
+                flex-wrap: wrap;
+                flex: 30%;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .mobile-links {
+                display: flex;
+                flex-direction: column;
+                flex: 60%;
+                justify-content: end;
+                text-align: right;
+                row-gap: 20px;
+            }
+
+            .mobile-icons img {
+                width: 32px;
+                height: 32px;
+            }
+
+            .mobile-menu a {
+                color: #0071c2;
+                text-decoration: none;
+                font-size: 16px;
+            }
+
+            .mobile-links a:hover {
+                color: #bdbcbc;
+                transition: all 0.5s;
+            }
+
+            .mobile-menu .cta-button {
+                /* display: inline-block; */
+                display: block;
+                font-size: 13px;
+                padding: 10px 15px;
+            }
+
+            .logo img {
+                scale: 0.9;
+            }
+
+            .logo-text span:first-child {
+                font-weight: 400;
+                font-size: 15px;
+                color: #000;
+                text-transform: uppercase;
+            }
+
+            .logo-text span:last-child {
+                font-weight: 300;
+                font-size: 12px;
+                color: #000;
+            }
+        }
+
+        .hero-section {
+            padding: 70px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .left-section {
+            margin-top: 40px;
+            flex: 40%;
+        }
+
+        .left-section p {
+            color: #000;
+            font-weight: 100;
+            margin: 50px 10px;
+            opacity: 0.7;
+        }
+
+        .left-section span {
+            font-size: 58px;
+            font-weight: 600;
+            color: #00296d;
+        }
+
+        .hero-button {
+            display: flex;
+            align-items: center;
+            width: 80%;
+            justify-content: space-between;
+        }
+
+        .hero-button a.highlight {
+            color: white;
+            background-color: #44c6e9;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 16px;
+            box-shadow: 6px 7px 0 0px #2977d5;
+        }
+
+        .hero-button a.highlight:hover {
+            box-shadow: 0 0 0 0 #fff;
+            transform: translate(6px, 7px);
+            transition: all 0.1s;
+        }
+
+        .hero-button a.highlink {
+            /* margin-left: 150px; */
+            color: #000;
+            opacity: 0.6;
+            text-decoration: none;
+        }
+
+        .hero-button a.highlink:hover {
+            color: #44c6e9;
+        }
+
+        .hero-button hr {
+            width: 130px;
+        }
+
+        .hero-button hr:hover {
+            color: #44c6e9;
+        }
+
+        .right-section {
+            width: 100%;
+            flex: 60%;
+            position: relative;
+        }
+
+        .right-section img {
+            /* width: 100%; */
+            max-width: 850px;
+            right: 0;
+        }
+
+        .hero-image img {
+            position: absolute;
+            top: 0;
+            right: 150px;
+            text-align: center;
+            max-width: 545px;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 500px) {
+            .hero-section {
+                flex-direction: column-reverse;
+                padding: 10px;
+                overflow: hidden;
+            }
+
+            .right-section {
+                padding: 20px;
+                width: 100%;
+            }
+
+            #circle {
+                width: 150%;
+                max-width: 635px;
+                top: -100px;
+                left: -33px;
+                position: absolute;
+                overflow: hidden;
+            }
+
+            .hero-image img {
+                /* display: none; */
+                max-width: 315px;
+                left: 50px;
+            }
+
+            .left-section {
+                margin-top: 460px;
+            }
+
+            .left-section p {
+                margin: 10px;
+                font-size: 13px;
+            }
+
+            .left-section span {
+                font-size: 32px;
+                font-weight: 600;
+                color: #00296d;
+            }
+
+            .hero-button {
+                flex: 100%;
+                width: 95%;
+            }
+
+            .hero-button a.highlight {
+                font-size: 12px;
+            }
+
+            .hero-button a.highlink {
+                font-size: 12px;
+                border: 1px solid rgba(0, 0, 0, 0.5);
+                padding: 12px 30px;
+                border-radius: 15px;
+            }
+
+            .hero-button hr {
+                display: none;
+            }
+        }
+
+        .island {
+            background-color: #d4e4f4;
+        }
+
+        .services {
+            /* width: 100%; */
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .box-text h2,
+        .box-text p {
+            color: #00296d;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 500px) {
+            .island {
+                background-color: #ffffff;
+            }
+
+            .services {
+                flex-direction: column;
+                align-items: start;
+                padding: 32px;
+            }
+
+            .box img {
+                width: 30px;
+            }
+
+            .box-text {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .box-text h2 {
+                font-size: 18px;
+                color: #000;
+                font-weight: lighter;
+            }
+
+            .email {
+                margin-right: 38px;
+            }
+
+            .box-text p {
+                font-size: 13px;
+                color: #666666;
+            }
+        }
+
+        .all_service {
+            position: relative;
+        }
+
+        .service_container {
+            padding: 100px 70px;
+        }
+
+        .title p {
+            color: #2977d5;
+            font-weight: 100;
+            /* margin: 50px 10px; */
+            opacity: 0.7;
+        }
+
+        .title h3 {
+            font-size: 58px;
+            font-weight: 600;
+            color: #00296d;
+            filter: drop-shadow(5px 5px #d4e4f4);
+        }
+
+        .service_container_gridbox {
+            display: grid;
+            grid-template-areas:
+                "box1 box2 box3"
+                "box4 box5 box6";
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .grid1 {
+            box-shadow: 5px 5px 20px 0 #d4e4f4;
+            border-radius: 15px;
+            z-index: 9999;
+        }
+
+        .grid1_container {
+            padding: 30px 20px;
+        }
+
+        .grid1_container h3 {
+            font-size: 30px;
+            font-weight: 600;
+            color: #2977d5;
+            margin: 15px 0;
+        }
+
+        .grid1_container p.txt {
+            opacity: 0.6;
+        }
+
+        .grid1_container p {
+            margin: 20px 0;
+        }
+
+        .bg_image img {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 500px) {
+            .service_container_gridbox {
+                display: grid;
+                grid-template-areas:
+                    "box1"
+                    "box2"
+                    "box3"
+                    "box4"
+                    "box5"
+                    "box6";
+                gap: 20px;
+                margin-top: 30px;
+            }
+
+            .bg_image {
+                display: none;
+            }
+        }
+
+        /* Testimonial */
+
+        .testimonial {
+            width: 100%;
+        }
+
+        .testimonial_frame {
+            margin: 0 80px;
+        }
+    </style>
 </head>
 
 <body>
-    <main>
 
-        <nav class="navbar">
-            <div class="logo">
-                <img src="./pic/Union.png">
-                <div class="logo-text">
-                    <span>Ondontologia Integral</span>
-                    <span>Salud & Estetica Dental</span>
-                </div>
-            </div>
-
-
-            <input type="checkbox" id="menu-toggle" />
-            <label for="menu-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-
-            <ul class="nav-links">
-                <div class="icon">
-                    <div>
-                        <img src="./pic/Vector (4).png" alt="linkedIn"> <br>
-                        <img src="./pic/insta.png" alt="linkedIn"> <br>
-                    </div>
-                    <div>
-                        <img src="./pic/mail.png" alt="linkedIn"> <br>
-                        <img src="./pic/facebook (2).png" alt="linkedIn"> <br>
-                    </div>
-                </div>
-
-                <div class="menu">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </div>
-
-            </ul>
-
-            <div>
-                <a href="#" class="cta-button">Saca Tu Turno</a>
-            </div>
-        </nav>
-
-        <div class="hero-section">
-            <div class="hero-text">
-                <span>En Cordoba Capital</span>
-                <div>
-                    <h3>Una excelente</h3>
-                    <h3>experiencia</h3>
-                    <h3 style="font-weight: 600;color: #2877D5; ">Odontológica</h3>
-                </div>
-
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit <br>
-                        molestie, rhoncus luctus arcu ut eros augue. Eu <br>
-                        commodo laoreet parturient quam purus magna pretium <br>
-                        luctus.
-                    </p>
-
-                    <div class="submit">
-                        <button>Saca Tu Turno</button>
-                        <a href="#">Nuestro Servicios</a>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-image">
-                <div class="circle"></div>
-                <img src="./pic/e6df049c77dc0a422658b59b68b7940e1c3be9d8.png" alt="hero-image">
+    <nav>
+        <div class="logo">
+            <img src="./pic/Union.png" alt="logo" />
+            <div class="logo-text">
+                <span>Ondontologia Integral</span>
+                <span>Salud & Estetica Dental</span>
             </div>
         </div>
 
-        
-        <div class="island">
-            <div class="island-container">
+        <div class="nav-links">
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Contacto</a>
+        </div>
 
-                <div class="box-1">
-                    <div class="box-1-image">
-                        <img src="./pic/Vector (1).png" width="100%">
-                    </div>
-                    <div class="box-1-text">
-                        <h2>Dirección</h2>
+        <a href="#" class="cta-button">Saca Tu Turno</a>
+
+        <input type="checkbox" id="menu-toggle" />
+        <label class="hamburger" for="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="mobile-menu">
+            <div class="mobile-icons">
+                <img src="./pic/Vector (4).png" alt="LinkedIn" />
+                <img src="./pic/mail.png" alt="Gmail" />
+                <img src="./pic/insta.png" alt="Instagram" />
+                <img src="./pic/facebook (2).png" alt="Facebook" />
+                <a href="#" class="cta-button">Saca Tu Turno</a>
+            </div>
+            <div class="mobile-links">
+
+                <a href="#">Inicio</a>
+                <a href="#">Servicios</a>
+                <a href="#">Nosotros</a>
+                <a href="#">Contacto</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="left-section">
+            <p style="color: #2977d5;">En Cordoba Capital</p>
+
+            <span>Una excelente</span><br>
+            <span>experiencia</span><br>
+            <span style="color: #2977d5;">Odontológica</span><br>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit <br>
+                molestie, rhoncus luctus arcu ut eros augue. Eu <br>
+                commodo laoreet parturient quam purus magna pretium <br>
+                luctus.
+            </p>
+
+            <div class="hero-button">
+                <a href="#" class="highlight">Saca Tu Turno</a>
+                <div>
+                    <a href="#" class="highlink">Nuestro Servicios</a>
+                    <hr>
+                </div>
+            </div>
+
+        </div>
+        <div class="right-section">
+            <img src="./pic/Rectangle 692.png" alt="circle" width="100%" id="circle">
+            <div class="hero-image">
+                <img src="./pic/e6df049c77dc0a422658b59b68b7940e1c3be9d8.png" alt="hero-image" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="island">
+        <div class="services">
+            <div class="box">
+                <img src="./pic/Vector (1).png" alt="location">
+                <div class="box-text">
+                    <h2>Dirección</h2>
+                    <div>
+
                         <p>Av. Color 1560</p>
                         <p>Cordoba, Cordoba Capital</p>
                     </div>
                 </div>
+            </div>
 
-                <div class="box-1">
-                    <div class="box-1-image">
-                        <img src="./pic/Vector (2).png" width="100%">
-                    </div>
-                    <div class="box-1-text">
-                        <h2>Email</h2>
-                        <p>Info@tudentista.com.ar</p>
-                        <p>Info@tudentista.com.ar</p>
+            <div class="box">
+                <img src="./pic/Vector (2).png" alt="message">
+                <div class="box-text">
+                    <h2 class="email">Email</h2>
+                    <div>
+
+                        <p>info@tudentista.com.ar</p>
+                        <p>info@tudentista.com.ar</p>
                     </div>
                 </div>
+            </div>
+            <div class="box">
+                <img src="./pic/Vector (3).png" alt="telefone">
+                <div class="box-text">
+                    <h2>Telefonos</h2>
+                    <div>
 
-                <div class="box-1">
-                    <div class="box-1-image">
-                        <img src="./pic/Vector (3).png" width="100%">
-                    </div>
-                    <div class="box-1-text">
-                        <h2>Telefonos</h2>
                         <p>351 7608XXX</p>
                         <p>3541 7825XXX</p>
                     </div>
                 </div>
             </div>
+
+        </div>
+    </div>
+
+    <div class="all_service">
+        <div class="service_container">
+            <div class="title">
+                <p>Especialidades</p>
+                <h3>Nuestros Servicios</h3>
+            </div>
+            <div class="service_container_gridbox">
+
+                <div class="grid1" style="grid-area: box1;">
+                    <div class="grid1_container">
+                        <img src="./pic/Group 93.png" alt="teeth">
+                        <h3>Implantes</h3>
+                        <p class="txt">Los implantes dentales son un sustituto artificial de los dientes y sus raíces.
+                            Generalmente
+                            de forma roscada, los implantes poseen un aspecto y sensación similares a los dientes
+                            naturales logrando de esta manera una mayor comodidad, seguridad y confianza en su uso,
+                            respecto de
+                            otros métodos.
+                        </p>
+                        <p style="color: #44C6E9;">Ver Mas &#8599;</p>
+                    </div>
+                </div>
+
+                <div class="grid1" style="grid-area: box2;">
+                    <div class="grid1_container">
+                        <img src="./pic/Group 107.png" alt="teeth">
+                        <h3>Ortodoncia</h3>
+                        <p class="txt">Los implantes dentales son un sustituto artificial de los dientes y sus raíces.
+                            Generalmente
+                            de forma roscada, los implantes poseen un aspecto y sensación similares a los dientes
+                            naturales logrando de esta manera una mayor comodidad, seguridad y confianza en su uso,
+                            respecto de
+                            otros métodos.
+                        </p>
+                        <p style="color: #44C6E9;">Ver Mas &#8599;</p>
+                    </div>
+                </div>
+
+                <div class="grid1" style="grid-area: box3;">
+                    <div class="grid1_container">
+                        <img src="./pic/cavity.png" alt="teeth">
+                        <h3>Implantes</h3>
+                        <p class="txt">Los implantes dentales son un sustituto artificial de los dientes y sus raíces.
+                            Generalmente
+                            de forma roscada, los implantes poseen un aspecto y sensación similares a los dientes
+                            naturales logrando de esta manera una mayor comodidad, seguridad y confianza en su uso,
+                            respecto de
+                            otros métodos.
+                        </p>
+                        <p style="color: #44C6E9;">Ver Mas &#8599;</p>
+                    </div>
+                </div>
+
+
+                <div class="grid1" style="grid-area: box4;">
+                    <div class="grid1_container">
+                        <img src="./pic/tooth-shine.png" alt="teeth">
+                        <h3>Implantes</h3>
+                        <p class="txt">Los implantes dentales son un sustituto artificial de los dientes y sus raíces.
+                            Generalmente
+                            de forma roscada, los implantes poseen un aspecto y sensación similares a los dientes
+                            naturales logrando de esta manera una mayor comodidad, seguridad y confianza en su uso,
+                            respecto de
+                            otros métodos.
+                        </p>
+                        <p style="color: #44C6E9;">Ver Mas &#8599;</p>
+                    </div>
+                </div>
+
+                <div class="grid1" style="grid-area: box5;">
+                    <div class="grid1_container">
+                        <img src="./pic/crown-alt.png" alt="teeth">
+                        <h3>Implantes</h3>
+                        <p class="txt">Los implantes dentales son un sustituto artificial de los dientes y sus raíces.
+                            Generalmente
+                            de forma roscada, los implantes poseen un aspecto y sensación similares a los dientes
+                            naturales logrando de esta manera una mayor comodidad, seguridad y confianza en su uso,
+                            respecto de
+                            otros métodos.
+                        </p>
+                        <p style="color: #44C6E9;">Ver Mas &#8599;</p>
+                    </div>
+                </div>
+
+                <div class="grid1" style="grid-area: box6;">
+                    <div class="grid1_container">
+                        <img src="./pic/golden-crown.png" alt="teeth">
+                        <h3>Implantes</h3>
+                        <p class="txt">Los implantes dentales son un sustituto artificial de los dientes y sus raíces.
+                            Generalmente
+                            de forma roscada, los implantes poseen un aspecto y sensación similares a los dientes
+                            naturales logrando de esta manera una mayor comodidad, seguridad y confianza en su uso,
+                            respecto de
+                            otros métodos.
+                        </p>
+                        <p style="color: #44C6E9;">Ver Mas &#8599;</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
-        <div class="services">
-            <div class="services-content">
-                <div class="services-title">
-                    <p>Especialidades</p>
-                    <h2>Nuestros Servicios</h2>
-                </div>
-                <div class="services-blocks">
-
-                    <div class="blocks1">
-                        <div class="services-blocks-content">
-                            <img src="./pic/Group 93.png">
-                            <h3>Implantes</h3>
-                            <p>Los implantes dentales son un sustituto artificial de los dientes y sus raíces.
-                                Generalmente de forma roscada, los implantes poseen un aspecto y sensación similares a
-                                los dientes naturales logrando de esta manera una mayor comodidad, seguridad y confianza
-                                en su uso, respecto de otros métodos.</p>
-                            <p>Ver Mas &#8599;</p>
-                        </div>
-                    </div>
-
-                    <div class="blocks1">
-                        <div class="services-blocks-content">
-                            <img src="./pic/Group 107.png">
-                            <h3>Ortodoncia</h3>
-                            <p>Los implantes dentales son un sustituto artificial de los dientes y sus raíces.
-                                Generalmente de forma roscada, los implantes poseen un aspecto y sensación similares a
-                                los dientes naturales logrando de esta manera una mayor comodidad, seguridad y confianza
-                                en su uso, respecto de otros métodos.</p>
-                            <p>Ver Mas &#8599;</p>
-                        </div>
-                    </div>
-
-
-                    <div class="blocks1">
-                        <div class="services-blocks-content">
-                            <img src="./pic/cavity.png">
-                            <h3>Implantes</h3>
-                            <p>Los implantes dentales son un sustituto artificial de los dientes y sus raíces.
-                                Generalmente de forma roscada, los implantes poseen un aspecto y sensación similares a
-                                los dientes naturales logrando de esta manera una mayor comodidad, seguridad y confianza
-                                en su uso, respecto de otros métodos.</p>
-                            <p>Ver Mas &#8599;</p>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="services-blocks">
-
-                    <div class="blocks1">
-                        <div class="services-blocks-content">
-                            <img src="./pic/tooth-shine.png ">
-                            <h3>Implantes</h3>
-                            <p>Los implantes dentales son un sustituto artificial de los dientes y sus raíces.
-                                Generalmente de forma roscada, los implantes poseen un aspecto y sensación similares a
-                                los dientes naturales logrando de esta manera una mayor comodidad, seguridad y confianza
-                                en su uso, respecto de otros métodos.</p>
-                            <p>Ver Mas &#8599;</p>
-                        </div>
-                    </div>
-
-                    <div class="blocks1">
-                        <div class="services-blocks-content">
-                            <img src="./pic/crown-alt.png">
-                            <h3>Implantes</h3>
-                            <p>Los implantes dentales son un sustituto artificial de los dientes y sus raíces.
-                                Generalmente de forma roscada, los implantes poseen un aspecto y sensación similares a
-                                los dientes naturales logrando de esta manera una mayor comodidad, seguridad y confianza
-                                en su uso, respecto de otros métodos.</p>
-                            <p>Ver Mas &#8599;</p>
-                        </div>
-                    </div>
-
-
-                    <div class="blocks1">
-                        <div class="services-blocks-content">
-                            <img src="./pic/golden-crown.png">
-                            <h3>Implantes</h3>
-                            <p>Los implantes dentales son un sustituto artificial de los dientes y sus raíces.
-                                Generalmente de forma roscada, los implantes poseen un aspecto y sensación similares a
-                                los dientes naturales logrando de esta manera una mayor comodidad, seguridad y confianza
-                                en su uso, respecto de otros métodos.</p>
-                            <p>Ver Mas &#8599;</p>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <div class="bg-teeth">
-                <img src="./pic/tooth.png" alt="teeth">
-            </div>
+        <div class="bg_image">
+            <img src="./pic/Union_bg.png" alt="teeth_bg" width="7s0%">
         </div>
-    </main>
+
+    </div>
+
+    <section class="testimonial">
+        <div class="testimonial_frame">
+            <p>Testimonios</p>
+            <h2>Lo que opinan nuestros Pacientes</h2>
+
+        </div>
+    </section>
+
 </body>
 
 </html>
