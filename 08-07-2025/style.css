@@ -655,3 +655,82 @@ nav {
   }
 }
 
+.our_people {
+  width: 100%;
+}
+
+.our_people_container {
+  padding: 150px 80px;
+  display: flex;
+  gap: 40px;
+}
+
+.people_info {
+  flex: 49%;
+  margin-left: 10px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin: auto;
+}
+
+.people_image {
+  flex: 49%;
+  overflow: hidden;
+}
+
+.people_info h2 {
+  font-size: 58px;
+  font-weight: 600;
+  color: #00296d;
+  filter: drop-shadow(5px 5px #d4e4f4);
+}
+
+.people_info h4 {
+  text-align: left;
+  color: #44c6e9;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.people_info ul,
+.people_info ul li {
+  list-style-type: disc;
+  margin-left: 10px;
+}
+
+.people_info ul ul {
+  margin-left: 20px;
+}
+
+@media (max-width: 500px) {
+  .our_people_container {
+    flex-direction: column;
+    padding: 30px;
+  }
+  .people_info h2 {
+    font-size: 32px;
+  }
+  .people_info ul li {
+    font-size: 13px;
+  }
+}
+
+.our_product_container{
+  margin: 30px 80px;
+}
+
+.our_product_container h2 {
+  font-size: 58px;
+  font-weight: 600;
+  color: #00296d;
+  filter: drop-shadow(5px 5px #d4e4f4);
+}
+
+.our_product_container h4 {
+  text-align: left;
+  color: #44c6e9;
+  font-size: 20px;
+  font-weight: 100;
+}
