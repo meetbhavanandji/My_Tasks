@@ -23,9 +23,9 @@
 
         <div class="nav-links">
             <a href="#">Inicio</a>
-            <a href="#">Servicios</a>
+            <a href="#servicios">Servicios</a>
             <a href="#">Nosotros</a>
-            <a href="#">Contacto</a>
+            <a href="#contacto">Contacto</a>
         </div>
 
         <a href="#" class="cta-button">Saca Tu Turno</a>
@@ -48,9 +48,9 @@
             <div class="mobile-links">
 
                 <a href="#">Inicio</a>
-                <a href="#">Servicios</a>
+                <a href="#servicios">Servicios</a>
                 <a href="#">Nosotros</a>
-                <a href="#">Contacto</a>
+                <a href="#contacto">Contacto</a>
 
             </div>
         </div>
@@ -127,7 +127,7 @@
         </div>
     </div>
 
-    <div class="all_service">
+    <div class="all_service" id="servicios">
         <div class="service_container">
             <div class="title">
                 <p>Especialidades</p>
@@ -152,8 +152,8 @@
 
                 <div class="grid1" style="grid-area: box2;">
                     <div class="grid1_container">
-                        <img src="./pic/Group 107.png" alt="teeth">
-                        <h3>Ortodoncia</h3>
+                        <img id="image_width" src="./pic/Group 107.png" alt="teeth">
+                        <h3 id="image_h3">Ortodoncia</h3>
                         <p class="txt">Los implantes dentales son un sustituto artificial de los dientes y sus raíces.
                             Generalmente
                             de forma roscada, los implantes poseen un aspecto y sensación similares a los dientes
@@ -604,7 +604,8 @@
                 <h4>Sacate las dudas</h4>
                 <h2>Preguntas Frecuentes</h2>
             </div>
-            <div class="container faq_text">
+            <!-- <div class="container faq_text"> -->
+            <div class="container">
                 <details>
                     <summary>
                         ¿Que Obras sociales aceptan?
@@ -645,7 +646,7 @@
                     <summary>
                         ¿Que Obras sociales aceptan?
                     </summary>
-                    <div class="faq_text">
+                    <div class="faq_text">3
                         Lorem ipsum dolor sit amet consectetur adipiscing elit conubia, massa facilisi lectus
                         ullamcorper
                         ridiculus potenti iaculis nibh, interdum faucibus ad diam vivamus vehicula fames. Convallis
@@ -679,6 +680,86 @@
         </div>
     </div>
 
+
+    <div class="contact" id="contacto">
+        <div class="contact_form">
+            <div class="contact_form_tittle">
+                <h4>Saca un turno</h4>
+                <h2>Contacto</h2>
+            </div>
+            <div class="contact_container">
+                <div class="contact_left">
+                    <div class="contact_left_up">
+
+                        <div class="column">
+                            <div class="column_img">
+                                <img src="./pic/Vector (4)1.png" alt="Msg">
+                            </div>
+                            <div class="column_text">
+                                <h3>Escribinos al Mail</h3>
+                                <p>info@tudentista.con.ar</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="column">
+                            <div class="column_img">
+                                <img src="./pic/Vector (5).png" alt="whatsapp">
+                            </div>
+                            <div class="column_text">
+                                <h3>Chatea con </h3>
+                                <p>+54 35176085XX</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="column">
+                            <div class="column_img">
+                                <img src="./pic/Vector (6).png" alt="call">
+                            </div>
+                            <div class="column_text">
+                                <h3>Llamanos</h3>
+                                <p>0810 888 90XX</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="column">
+                            <div class="column_img">
+                                <img src="./pic/Group (1)1.png" alt="location">
+                            </div>
+                            <div class="column_text">
+                                <h3>Visitanos</h3>
+                                <p>Av. Color 1388, Barrio Alberdi</p>
+                                <p>Lunes a Viernes 8 a 18</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="contact_left_down">
+                        <img src="./pic/facebook (2).png" alt="">
+                        <img src="./pic/Vector (4).png" alt="">
+                        <img src="./pic/insta.png" alt="">
+                    </div>
+                </div>
+                <div class="contact_right">
+                    <h2>Ponete en contacto para coordinar un turno</h2>
+                    <form action="">
+                        <label for="fname"></label>
+                        <input type="text" name="fname" id="fname" placeholder="Nombre">
+
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="Email">
+
+                        <label for="number"></label>
+                        <input type="tel" name="number" id="number" placeholder="Telefono">
+
+                        <textarea name="textarea" id="textarea" placeholder="Problema"></textarea>
+                        <button type="submit" class="enviar">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <img class="map" src="./pic/image 2.png" alt="map" width="100%">
+        <p class="footer">Diseñado por Uncoder.com.ar</p>
+    </div>
 </body>
 
 </html>
