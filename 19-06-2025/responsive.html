@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bea1090ddf.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* background-color: lightgrey; */
+            background: url(https://wallpapers.com/images/featured/8k-ultra-hd-nature-prdfm720u6780jl5.jpg) no-repeat center center;
+            /* background-size: cover; */
+            height: 100vh;
+            width: 100%;
+        }
+
+        .hamburger-icon {
+            display: none;
+        }
+
+        header {
+            /* position: fixed; */
+            /* top: 0; */
+            /* left: 0; */
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+            backdrop-filter: blur(5px);
+        }
+
+        .logo-text {
+            color: white;
+        }
+
+        .hamburger-icon {
+            border: none;
+            background-color: transparent;
+        }
+
+        .hamburger-icon .fa-bars,
+        .hamburger-icon .fa-x {
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .hamburger-icon input[type="checkbox"] {
+            appearance: none;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navigation a {
+            color: azure;
+        }
+
+
+        @media screen and (max-width: 600px) {
+            header {
+                display: block;
+            }
+
+            .navigation {
+                height: 0;
+                overflow: hidden;
+                flex-direction: column;
+                align-items: center;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .logo {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .hamburger-icon {
+                display: block;
+            }
+
+            .fa-x {
+                display: none;
+            }
+
+            header:has(.hamburger-icon input[type="checkbox"]:checked) .navigation {
+                margin-top: 2rem;
+                height: 150px;
+            }
+
+            header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
+                display: none;
+            }
+
+            header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-x {
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logo-text">LOGO</h1>
+            <button class="hamburger-icon">
+                <label for="dropdown">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-x"></i>
+                </label>
+                <input type="checkbox" id="dropdown" />
+            </button>
+        </div>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+</body>
+
+</html>

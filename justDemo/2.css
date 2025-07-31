@@ -1,0 +1,92 @@
+* {
+  scroll-behavior: smooth;
+  list-style-type: none;
+  scrollbar-width: 0px;
+  scrollbar-color: trasparent;
+}
+
+.carousel__viewport {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .carousel__slide {
+    flex: 0 0 300%;
+    scroll-snap-align: center;
+  }
+}
+
+.testimonial-group {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.testimonial-card {
+  flex: 1 1 30%;
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 5px 0 20px 0 #d4e4f4;
+  text-align: left;
+}
+
+.testimonial-card h3 {
+  margin: 0 0 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.testimonial-card .stars {
+  color: #00cfff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.carousel__navigation {
+  width: 100%;
+  height: auto;
+}
+
+.carousel__navigation-list {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 50px;
+  gap: 50px;
+}
+
+.tst {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel__navigation-list a {
+  width: 15px;
+  height: 15px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}
+
+.carousel__navigation-list a:link {
+  /* background-color: #d9d9d9; */
+}
+.carousel__navigation-list a:focus {
+  background-color: #2977d5;
+}
+.carousel__navigation-list a:checked {
+  /* background-color: #2977d5; */
+}
+.carousel__navigation-list a:active {
+  background-color: #2977d5;
+}

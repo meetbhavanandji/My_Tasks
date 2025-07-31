@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background: linear-gradient(#FFF9FD,#D4E4F466 40%);
+            line-height: 1.5;
+            font-size: 1.25rem;
+        }
+
+        .faq_text {
+            width: 90%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        details div {
+            border-left: 2px solid #000;
+            border-right: 2px solid #000;
+            border-bottom: 2px solid #000;
+            padding: 1.5em;
+        }
+
+        details div>*+* {
+            margin-top: 1.5em;
+        }
+
+        details {
+            margin: 2.5rem 0;
+        }
+
+        summary {
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary {
+            border: 0.5px solid #D4E4F4;
+            border-radius: 15px;
+            padding: .75em 1em;
+            background-color: #FFF9FD;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 5px 5px 0 0 #D4E4F4;
+            padding-left: calc(1.75rem + .75rem + .75rem);
+        }
+
+        summary:before {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: .75rem;
+            content: '\02C4';
+            width: 2rem;
+            height: 2rem;
+            color: #2977d5;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        details[open] summary {
+            background-color: #eee;
+        }
+
+        details[open] summary:before {
+            content: '\02C5';
+        }
+
+        summary:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container faq_text">
+        <details>
+            <summary>
+                ¿Que Obras sociales aceptan?
+            </summary>
+            <div class="faq_text">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit conubia, massa facilisi lectus ullamcorper
+                ridiculus potenti iaculis nibh, interdum faucibus ad diam vivamus vehicula fames. Convallis ornare
+                praesent mollis at habitasse morbi eu ridiculus, tristique proin venenatis dictum nisl volutpat
+                interdum, eleifend velit erat mi penatibus nibh curabitur. Vestibulum augue condimentum luctus auctor
+                nullam imperdiet magna, mattis scelerisque erat odio aliquam risus nam morbi, accumsan dapibus montes
+                facilisis suspendisse rhoncus.
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                ¿Que Obras sociales aceptan?
+            </summary>
+            <div class="faq_text">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit conubia, massa facilisi lectus ullamcorper
+                ridiculus potenti iaculis nibh, interdum faucibus ad diam vivamus vehicula fames. Convallis ornare
+                praesent mollis at habitasse morbi eu ridiculus, tristique proin venenatis dictum nisl volutpat
+                interdum, eleifend velit erat mi penatibus nibh curabitur. Vestibulum augue condimentum luctus auctor
+                nullam imperdiet magna, mattis scelerisque erat odio aliquam risus nam morbi, accumsan dapibus montes
+                facilisis suspendisse rhoncus.
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                ¿Que Obras sociales aceptan?
+            </summary>
+            <div class="faq_text">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit conubia, massa facilisi lectus ullamcorper
+                ridiculus potenti iaculis nibh, interdum faucibus ad diam vivamus vehicula fames. Convallis ornare
+                praesent mollis at habitasse morbi eu ridiculus, tristique proin venenatis dictum nisl volutpat
+                interdum, eleifend velit erat mi penatibus nibh curabitur. Vestibulum augue condimentum luctus auctor
+                nullam imperdiet magna, mattis scelerisque erat odio aliquam risus nam morbi, accumsan dapibus montes
+                facilisis suspendisse rhoncus.
+            </div>
+        </details>
+
+        <details>
+            <summary>¿Que Obras sociales aceptan?</summary>
+            <div class="faq_text">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit conubia, massa facilisi lectus ullamcorper
+                ridiculus potenti iaculis nibh, interdum faucibus ad diam vivamus vehicula fames. Convallis ornare
+                praesent mollis at habitasse morbi eu ridiculus, tristique proin venenatis dictum nisl volutpat
+                interdum, eleifend velit erat mi penatibus nibh curabitur. Vestibulum augue condimentum luctus auctor
+                nullam imperdiet magna, mattis scelerisque erat odio aliquam risus nam morbi, accumsan dapibus montes
+                facilisis suspendisse rhoncus.
+            </div>
+        </details>
+
+    </div>
+</body>
+
+</html>

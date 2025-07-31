@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            background-color: #eee;
+        }
+
+        .container {
+            /* border-radius: 10px; */
+            /* padding: 20px 50px; */
+            width: 60%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 80dvh;
+            column-gap: 90px;
+        }
+
+        .left {
+            /* float: left; */
+            /* text-align: right; */
+            /* border: 2px solid black; */
+            width: 40%;
+            margin-top: 20px;
+            font-family: cursive;
+            color: blue;
+            font-size: xx-large;
+            /* visibility: hidden; */
+        }
+
+        .right {
+            /* float: left; */
+            /* text-align: left; */
+            /* border: 2px solid black; */
+            width: 40%;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+
+        }
+
+        input,
+        button {
+            padding: 12px;
+            width: 100%;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login {
+            background-color: blue;
+            color: white;
+            font-size: 30px;
+            font-weight: 700;
+            border: none;
+        }
+
+        .login:hover {
+            opacity: 0.7;
+        }
+
+        .forpass {
+            color: blue;
+            /* font-size: 30px; */
+            /* font-weight: 700; */
+            border: none;
+            padding: 0;
+        }
+
+        .forpass:hover {
+            text-decoration: underline;
+        }
+
+        .newact {
+            background-color: chartreuse;
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            border: none;
+            opacity: 0.8;
+        }
+
+        .newact:hover {
+            opacity: 1;
+        }
+
+        input::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="left">
+            <h1>Facebook</h1>
+        </div>
+
+        <div class="right">
+            <form action="do-something"></form>
+
+            <label for="username"></label>
+            <input type="email" name="email" id="email" placeholder="enter your email address "><br>
+            <span></span><br>
+
+            <label for="passaword"></label>
+            <input type="password" name="passaword" id="passaword" placeholder="password"><br>
+            <span></span><br>
+
+            <button class="login" type="reset">Log in</button><br>
+            <span></span><br>
+
+            <button class="forpass" type="reset">Forgotten passaword?</button><br>
+            <span></span><br>
+
+            <button class="newact" type="submit">Create new accout</button><br>
+            <span></span><br>
+
+        </div>
+    </div>
+</body>
+
+</html>

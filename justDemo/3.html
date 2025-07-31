@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carousal {
+            padding: 0 1.2rem;
+            /* height: -10%; */
+            /* width: 135vh; */
+            /* margin: 0 auto; */
+        }
+
+        .container {
+            margin: 0 auto; 
+            position: relative;
+            max-width: 48rem;
+        }
+
+        .slider {
+            display: flex;
+            aspect-ratio: 16 / 9;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding-bottom: 1.5rem; 
+            border-radius: 15px;
+        }
+
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slider img {
+            flex: 1 0 100%;
+            scroll-snap-align: start;
+            object-fit: cover;
+            /* margin-left: 20px; */
+        }
+
+        .slider_nav {
+            position: absolute;
+            column-gap: 1rem;
+            display: flex;
+            bottom: 1.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+
+        }
+
+        .slider_nav a {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: #000;
+            opacity: 0.75;
+            margin-left: 1.5rem;
+            transition: opacity ease 250ms;
+        }
+
+        .slider_nav a:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousal">
+        <div class="container">
+            <div class="slider">
+                <img src="../08-07-2025/pic/pexels-anna-shvets-3845981 1.png" id="slider1">
+                <img src="../08-07-2025/pic/pexels-anna-shvets-3845729 1.png" id="slider2">
+                <img src="../08-07-2025/pic/ChatGPT Image Jul 19, 2025, 01_00_14 PM.png" id="slider3">
+                <img src="../08-07-2025/pic/ChatGPT Image Jul 19, 2025, 01_04_02 PM.png" id="slider4">
+                <img src="../08-07-2025/pic/ChatGPT Image Jul 19, 2025, 01_06_13 PM.png" id="slider5">
+            </div>
+            <div class="slider_nav">
+                <a href="#slider1" checked></a>
+                <a href="#slider2"></a>
+                <a href="#slider3"></a>
+                <a href="#slider4"></a>
+                <a href="#slider5"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

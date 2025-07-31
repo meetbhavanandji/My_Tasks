@@ -1,0 +1,157 @@
+:root {
+  --color: #0f1016;
+  --text-color: #f0f0f0;
+  --accent-color: 006aff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: cursive; */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  font-size: 12pt;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+nav {
+  height: 60px;
+  background-color: var(--color);
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.link-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  background-color: var(--accent-color);
+}
+nav .home-link {
+  margin-right: auto;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.link-container a:hover {
+  color: #667eea;
+  transform: scale(1.05);
+}
+
+nav svg {
+  fill: var(--text-color);
+}
+#sidebar-active {
+  display: none;
+}
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+}
+
+.content {
+  margin-top: 70px;
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.3s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 450px) {
+  .home-link {
+    display: none;
+  }
+  .link-container {
+    /* display: none; */
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 300;
+    width: 300px;
+    transition: 0.5s ease-out;
+    background-color: var(--color);
+  }
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+
+  .open-sidebar-button,
+  .close-sidebar-button {
+    padding: 20px;
+    display: block;
+  }
+  #sidebar-active:checked ~ .link-container {
+    /* display: flex; */
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+}

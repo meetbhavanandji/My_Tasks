@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+  color: #ffffff;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Layout */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+}
+
+/* Logo Styles */
+
+.image-flex {
+  display: flex;
+  align-items: center;
+  column-gap: 18px;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Toggle Button Styling */
+#nav-toggle {
+  display: none;
+}
+
+.toggle {
+  position: absolute;
+  height: 42px;
+  width: 30px;
+  top: 10px;
+  right: px;
+  cursor: pointer;
+}
+
+.toggle .common {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: linear-gradient(#bcb3e5, #887eb6);
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.toggle .top-line {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle .middle-line {
+  width: 15px;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle .last-line {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Toggle Animation */
+#nav-toggle:checked ~ .toggle .top-line {
+  left: 7px;
+  top: 14px;
+  width: 15px;
+  transform: rotate(45deg);
+  /* transition-duration: 0.1s; */
+}
+
+#nav-toggle:checked ~ .toggle .last-line {
+  left: 7px;
+  top: 14px;
+  width: 15px;
+  transform: rotate(-45deg);
+  /* transition-duration: 0.1s; */
+}
+
+#nav-toggle:checked ~ .toggle .middle-line {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition-duration: 0s;
+}
+
+/* Toggle Menu Appearance */
+#nav-toggle:checked ~ nav ul {
+  max-height: 300px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+nav ul {
+  display: flex;
+  gap: 60px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    /* background-color: #302c42; */
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    margin: 22px 0;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .header-buttons {
+    display: none;
+  }
+
+  .tog-btn {
+    display: block;
+  }
+}
