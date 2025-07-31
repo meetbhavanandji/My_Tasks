@@ -482,6 +482,7 @@ nav {
     color: #666666;
   }
 }
+/* ALL SERVICE */
 
 .all_service {
   position: relative;
@@ -518,10 +519,14 @@ nav {
   border-radius: 15px;
   z-index: 9999;
   background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.4s;
 }
 
 .grid1_container {
   padding: 30px 20px;
+}
+.grid1:hover {
+  transform: scale(1.02);
 }
 
 .grid1_container h3 {
@@ -565,7 +570,7 @@ nav {
   }
   .grid1_container img {
     /* transform: scale(0.5); */
-    width: 50px;
+    width: 40px;
     float: left;
   }
   .grid1_container h3 {
@@ -573,8 +578,9 @@ nav {
     width: 100%;
   }
   .grid1_container p {
-    font-size: 10px;
+    font-size: 8px;
     margin: 5px 0;
+    margin-top: -5px !important;
   }
   #image_width {
     transform: scale(1.2);
@@ -586,7 +592,7 @@ nav {
     margin-bottom: 0 !important;
   }
   .bg_image img {
-    height: 824px;
+    height: 694px;
   }
 }
 
@@ -682,8 +688,12 @@ nav {
 
 .testimonial-card .stars {
   color: #00cfff;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
 }
 
 .carousel__navigation {
@@ -767,13 +777,23 @@ nav {
     flex: 10%;
   }
   .testimonial-card p {
-    font-size: 10px;
+    font-size: 7px;
   }
   .stars img {
-    transform: scale(0.5);
+    transform: scale(2.5);
+    margin-right: 4px !important;
     margin: 0;
     padding: 0;
     width: 5px;
+  }
+  .carousel__navigation-list a {
+    width: 7px;
+    height: 7px;
+  }
+  .ver-mas-btn a {
+    padding: 5px;
+    font-size: xx-small;
+    border-radius: 8px;
   }
 }
 
@@ -822,6 +842,7 @@ nav {
 .people_image {
   flex: 49%;
   overflow: hidden;
+  border-radius: 5px;
 }
 
 .people_info h2 {
@@ -860,6 +881,29 @@ nav {
     font-size: 13px;
   }
 }
+
+@media (max-width: 768px) {
+  .our_people_container {
+    padding: 120px 35px;
+    border-radius: 15px;
+  }
+  .people_info h4 {
+    font-size: 7px;
+  }
+  .people_info h2 {
+    font-size: 28px;
+  }
+  .people_info ul li {
+    font-size: 7px;
+  }
+  .people_image img {
+    transform: scale(1.5);
+  }
+  .people_image {
+  }
+}
+
+/* OUR PRODUCT */
 
 .our_product {
   margin: 50px 0;
@@ -976,6 +1020,23 @@ nav {
   }
 }
 
+@media (max-width: 768px) {
+  .our_product_container {
+    margin: 30px 30px;
+  }
+  .our_product_container h4 {
+    font-size: 10px;
+  }
+  .our_product_container h2 {
+    font-size: 28px;
+  }
+  .our_product_bg {
+    width: 300px;
+  }
+}
+
+/* FAQ */
+
 .faq {
   background: linear-gradient(#fff9fd, #d4e4f4 40%);
 }
@@ -1081,6 +1142,26 @@ details[open] summary:before {
   }
 }
 
+@media (max-width: 768px) {
+  .faq_container h4 {
+    font-size: 10px;
+  }
+  .faq_container h2 {
+    font-size: 28px;
+  }
+  summary {
+    font-size: 10px;
+  }
+  .faq_text {
+    font-size: 10px;
+  }
+  .faq_container {
+    padding: 80px 50px;
+  }
+}
+
+/* CONTACT */
+
 .contact {
   background: linear-gradient(#d4e4f4 40%, #2977d5);
 }
@@ -1090,6 +1171,7 @@ details[open] summary:before {
 
 .contact_container {
   display: flex;
+  width: 100%;
 }
 
 .contact_left {
@@ -1226,6 +1308,67 @@ textarea {
 .contact .map {
   object-fit: cover;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .contact_form_tittle h4 {
+    font-size: 7px;
+  }
+  .contact_form_tittle h2 {
+    font-size: 28px;
+  }
+  .contact_form {
+    padding: 80px 30px;
+  }
+  .column_img {
+    transform: scale(0.4);
+    margin-top: -20px;
+  }
+  .column_text h3 {
+    font-size: 14px;
+    font-weight: lighter;
+  }
+  .column {
+    column-gap: 0;
+  }
+  .column_text p {
+    font-size: 10px;
+  }
+  .contact_left_down img {
+    transform: scale(0.6);
+  }
+  .contact_right {
+    padding: 15px;
+  }
+  .contact_right h2 {
+    font-size: 22px;
+  }
+  .contact_right input::placeholder,
+  .contact_right textarea::placeholder {
+    font-size: 14px;
+    opacity: 0.6;
+    font-weight: lighter;
+  }
+  .contact_right input {
+    padding: 8px 8px;
+  }
+  textarea {
+    padding: 0 5px;
+  }
+  .contact_left,
+  .contact_right {
+    flex: 50%;
+  }
+  .enviar {
+    width: 50%;
+    padding: 12px;
+    font-size: 10px;
+    border-radius: 5px;
+  }
+  .footer {
+    font-size: 10px;
+    font-weight: lighter;
+  }
 }
 
 @media (max-width: 500px) {
